@@ -1,8 +1,9 @@
 {
-  "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
-  "version": "1.1.0",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "name": "madebyjamie.dev",
+  "description": "Personal website running on Gatsby, React, and Node.js.",
+  "version": "0.1.0",
+  "author": "Jamie Burnip <jamieburnip@gmail.com>",
+  "repository": "git@github.com:jamieburnip/madebyjamie.dev",
   "dependencies": {
     "gatsby": "^2.15.28",
     "gatsby-image": "^2.2.23",
@@ -56,7 +57,14 @@
     "write-good": "^1.0.1"
   },
   "keywords": [
-    "gatsby"
+    "jamie burnip",
+    "development",
+    "dev",
+    "gatsby",
+    "tutorials",
+    "tech",
+    "articles",
+    "blog"
   ],
   "license": "MIT",
   "main": "n/a",
