@@ -1,10 +1,12 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../layout';
+import PostListing from '../components/PostListing/PostListing';
+import Quotation from '../components/Quotation';
+import SEO from '../components/SEO/SEO';
+import config from '../../data/SiteConfig';
+import quotes from '../../data/quotes';
 
 class Index extends React.Component {
   render() {
@@ -15,6 +17,15 @@ class Index extends React.Component {
           <Helmet title={config.siteTitle} />
           <SEO />
           <PostListing postEdges={postEdges} />
+
+          <section className="section">
+            <h2>{`Other People's Opinions`}</h2>
+            <div className="quotations">
+              {quotes.map(quote => (
+                <Quotation quote={quote} />
+              ))}
+            </div>
+          </section>
         </div>
       </Layout>
     );
