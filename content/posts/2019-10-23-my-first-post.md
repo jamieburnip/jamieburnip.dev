@@ -11,7 +11,7 @@ tags:
 ---
 # Domos primus caelum taedia
 
-![](../images/logo-48.png)
+![Alt text for logo 48](../images/logo-48.png)
 
 ## Accipit alto fecerat mutato centauri haerent dominoque
 
