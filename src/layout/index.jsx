@@ -1,7 +1,9 @@
-import React from "react";
-import Helmet from "react-helmet";
-import config from "../../data/SiteConfig";
-import "./index.scss";
+import React from 'react';
+import Helmet from 'react-helmet';
+import config from '../../data/SiteConfig';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer';
+import './index.scss';
 
 export default class MainLayout extends React.Component {
   render() {
@@ -9,10 +11,13 @@ export default class MainLayout extends React.Component {
     return (
       <div>
         <Helmet>
-          <meta name="description" content={config.siteDescription} />
           <html lang="en" />
+          <meta name="description" content={config.siteDescription} />
+          {/* <link rel="shortcut icon" type="image/png" href={favicon} /> */}
         </Helmet>
-        {children}
+        <Navigation menuLinks={config.menuLinks} />
+        <main id="main-content">{children}</main>
+        <Footer />
       </div>
     );
   }
