@@ -16,31 +16,31 @@ export default class Footer extends Component {
         </div>
         <div>
           <a href="https://github.com/jamieburnip" title="Open-source on GitHub">
-            {/* <img
-              src={github}
+            <img
+              src="https://www.fillmurray.com/20/30"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-img"
               alt="GitHub"
-            /> */}
+            />
           </a>
           <a href="https://www.netlify.com/" title="Hosted by Netlify">
-            {/* <img
-              src={netlify}
+            <img
+              src="https://www.fillmurray.com/20/30"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-img"
               alt="GitHub"
-            /> */}
+            />
           </a>
           <a href="https://www.gatsbyjs.org/" title="Built with Gatsby">
-            {/* <img
-              src={gatsby}
+            <img
+              src="https://www.fillmurray.com/20/30"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-img"
               alt="GitHub"
-            /> */}
+            />
           </a>
         </div>
       </footer>

@@ -35,7 +35,7 @@ export default class Navigation extends Component {
         <div className="nav-container">
           <div className="brand">
             <Link to="/">
-              {/* <img src={floppy} className="favicon" alt="Floppy Diskette" /> */}
+              <img src="https://www.fillmurray.com/30/20" className="favicon" alt="Floppy Diskette" />
               <span className="text">made by jamie</span>
             </Link>
           </div>
