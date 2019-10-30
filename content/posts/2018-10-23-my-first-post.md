@@ -2,10 +2,10 @@
 date: 2018-10-23
 title: "Jamie Burnip's First Post"
 cover: "https://unsplash.it/1152/300/?random?BirchintheRoses"
-category: "tech"
 slug: "my-first-post"
 categories:
   - Tools
+  - Popular
 tags:
     - test
     - jb

@@ -61,7 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
               frontmatter {
                 title
                 tags
-                category
+                categories
                 date
               }
             }
@@ -105,8 +105,10 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     }
 
-    if (edge.node.frontmatter.category) {
-      categorySet.add(edge.node.frontmatter.category);
+    if (edge.node.frontmatter.categories) {
+      edge.node.frontmatter.categories.forEach(category => {
+        categorySet.add(category);
+      });
     }
 
     const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
