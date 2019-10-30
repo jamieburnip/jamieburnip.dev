@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-// import netlify from '../../content/images/netlify.png'
-// import gatsby from '../../content/thumbnails/gatsby.png'
-// import github from '../../content/images/github.png'
+import netlify from '../../content/images/netlify.png'
+import gatsby from '../../content/images/gatsby.png'
+import github from '../../content/images/github.png'
 
 export default class Footer extends Component {
   render() {
     return (
       <footer className="footer container">
         <div>
-          <Link to="/newsletter">Newsletter</Link>
           <a href="https://www.madebyjamie.dev/rss.xml" target="_blank" rel="noopener noreferrer">
             RSS
           </a>
@@ -17,7 +16,7 @@ export default class Footer extends Component {
         <div>
           <a href="https://github.com/jamieburnip" title="Open-source on GitHub">
             <img
-              src="https://www.fillmurray.com/20/30"
+              src={github}
               target="_blank"
               rel="noopener noreferrer"
               className="footer-img"
@@ -26,7 +25,7 @@ export default class Footer extends Component {
           </a>
           <a href="https://www.netlify.com/" title="Hosted by Netlify">
             <img
-              src="https://www.fillmurray.com/20/30"
+              src={netlify}
               target="_blank"
               rel="noopener noreferrer"
               className="footer-img"
@@ -35,7 +34,7 @@ export default class Footer extends Component {
           </a>
           <a href="https://www.gatsbyjs.org/" title="Built with Gatsby">
             <img
-              src="https://www.fillmurray.com/20/30"
+              src={gatsby}
               target="_blank"
               rel="noopener noreferrer"
               className="footer-img"
