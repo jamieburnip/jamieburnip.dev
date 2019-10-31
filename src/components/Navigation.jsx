@@ -32,19 +32,21 @@ export default class Navigation extends Component {
 
     return (
       <nav className={scrolled ? 'nav scroll' : 'nav'}>
-        <div className="nav-container">
-          <div className="brand">
-            <Link to="/">
-              <img src="https://www.fillmurray.com/30/20" className="favicon" alt="Floppy Diskette" />
-              <span className="text">made by jamie</span>
-            </Link>
-          </div>
-          <div className="links">
-            {menuLinks.map(link => (
-              <Link key={link.name} to={link.link} activeClassName="active">
-                {link.name}
+        <div className="nav-container container">
+          <div class="row">
+            <div class="one-half column brand">
+              <Link to="/">
+                <img src="https://www.fillmurray.com/30/20" className="favicon" alt="Floppy Diskette" />
+                <span className="text">made by jamie</span>
               </Link>
-            ))}
+            </div>
+            <div class="one-half column links">
+              {menuLinks.map(link => (
+                <Link key={link.name} to={link.link} activeClassName="active">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </nav>

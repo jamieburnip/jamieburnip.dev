@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
-import PostListing from '../components/PostListing/PostListing';
+import PostListing from '../components/PostListing';
 import ProjectListing from '../components/ProjectListing';
 import Quotation from '../components/Quotation';
 import SEO from '../components/SEO/SEO';
@@ -25,14 +25,14 @@ class Index extends React.Component {
             <ProjectListing projects={projects} />
           </section>
 
-          <section className="section">
+          {/* <section className="section">
             <h2>{`Other People's Opinions`}</h2>
             <div className="quotations">
               {quotes.map(quote => (
                 <Quotation quote={quote} />
               ))}
             </div>
-          </section>
+          </section> */}
         </div>
       </Layout>
     );

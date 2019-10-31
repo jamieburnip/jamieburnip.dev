@@ -20,3 +20,19 @@ body {
     padding: 20px;
     background: $colorTwo;
 }
+
+a {
+    color: $colorFour;
+}
+
+.footer a {
+    font-weight: 400;
+    color: #a6a6a6;
+    // display: block;
+    margin-right: 1.5rem;
+}
+.footer .footer-img {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 0;
+}
