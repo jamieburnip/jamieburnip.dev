@@ -14,7 +14,15 @@ export default class Footer extends Component {
               RSS
             </a>
           </div>
-          <div class="one-half column links">
+          <div class="one-half column links">    
+            <a href="https://www.shopify.com/?ref=jamieburnip" title="Shopify">
+              <img
+                src={github}
+                target="_blank"
+                className="footer-img"
+                alt="Shopify Partner"
+              />
+            </a>
             <a href="https://github.com/jamieburnip" title="Open-source on GitHub">
               <img
                 src={github}
@@ -24,7 +32,7 @@ export default class Footer extends Component {
                 alt="GitHub"
               />
             </a>
-            <a href="https://www.netlify.com/" title="Hosted by Netlify">
+            {/* <a href="https://www.netlify.com/" title="Hosted by Netlify">
               <img
                 src={netlify}
                 target="_blank"
@@ -41,7 +49,7 @@ export default class Footer extends Component {
                 className="footer-img"
                 alt="GitHub"
               />
-            </a>
+            </a> */}
           </div>
         </div>
       </footer>
