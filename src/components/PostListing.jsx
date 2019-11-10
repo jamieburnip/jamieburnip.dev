@@ -23,12 +23,12 @@ class PostListing extends React.Component {
     return (
       <div>
         {/* Your post list here. */
-        postList.map(post => (
-          <Link to={post.path} key={post.title}>
-            <h2>{post.title}</h2>
-          </Link>
-        ))
-}
+          postList.map(post => (
+            <Link to={post.path} key={post.title}>
+              <h2>{post.title}</h2>
+            </Link>
+          ))
+        }
       </div>
     );
   }
