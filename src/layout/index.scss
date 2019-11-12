@@ -1,39 +1,5 @@
-$colorBlack: #131415;
-$wcolorWhite: #ffffff;
-$colorPink: #ff1493;
+@tailwind base;
 
-@import '../../node_modules/skeleton-scss/scss/skeleton';
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 20px;
-    background: $wcolorWhite;
-}
-
-a {
-    color: $colorBlack;
-    
-    &:hover {
-        color: $colorPink;
-    }
-}
-
-.footer a {
-    font-weight: 400;
-    color: #a6a6a6;
-    // display: block;
-    margin-right: 1.5rem;
-}
-.footer .footer-img {
-    height: 30px;
-    width: 30px;
-    margin-bottom: 0;
+.btn {
+  @apply px-4 py-2 rounded font-semibold bg-gray-200 text-black;
 }
