@@ -1,9 +1,9 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import config from '../../data/SiteConfig';
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer';
-import './index.scss';
+import React from "react";
+import Helmet from "react-helmet";
+import config from "../../data/SiteConfig";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import "./index.scss";
 
 export default class MainLayout extends React.Component {
   render() {
@@ -16,13 +16,14 @@ export default class MainLayout extends React.Component {
           {/* <link rel="shortcut icon" type="image/png" href={favicon} /> */}
 
           <meta charset="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
         </Helmet>
         <Navigation menuLinks={config.menuLinks} />
         <main id="main-content">
-          <div class="container">
-            {children}
-          </div>
+          <div class="container mx-auto">{children}</div>
         </main>
         <Footer />
       </div>

@@ -24,6 +24,14 @@ module.exports = {
         postCssPlugins: [require("tailwindcss")("./tailwind.config.js")]
       }
     },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true,
+        develop: true,
+        tailwind: true
+      }
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-lodash",
     {
