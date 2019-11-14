@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'gatsby';
+import React, { Component } from "react";
+import { Link } from "gatsby";
 // import floppy from '../images/floppy.png'
 // import sun from '../images/sun.svg'
 // import moon from '../images/moon.svg'
@@ -7,37 +7,36 @@ import { Link } from 'gatsby';
 
 export default class Navigation extends Component {
   state = {
-    scrolled: false,
-  }
+    scrolled: false
+  };
 
   componentDidMount() {
-    window.addEventListener('scroll', this.navOnScroll)
+    window.addEventListener("scroll", this.navOnScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.navOnScroll)
+    window.removeEventListener("scroll", this.navOnScroll);
   }
 
   navOnScroll = () => {
     if (window.scrollY > 20) {
-      this.setState({ scrolled: true })
+      this.setState({ scrolled: true });
     } else {
-      this.setState({ scrolled: false })
+      this.setState({ scrolled: false });
     }
-  }
+  };
 
   render() {
-    const { scrolled } = this.state
-    const { menuLinks } = this.props
+    const { scrolled } = this.state;
+    const { menuLinks } = this.props;
 
     return (
-      <nav className={scrolled ? 'nav scroll' : 'nav'}>
+      <nav className={scrolled ? "nav scroll" : "nav"}>
         <div className="nav-container container">
           <div class="row">
             <div class="one-half column brand">
               <Link to="/">
-                <img src="https://www.fillmurray.com/30/20" className="favicon" alt="Floppy Diskette" />
-                <span className="text">made by jamie</span>
+                <span className="text">made by jamie.dev</span>
               </Link>
             </div>
             <div class="one-half column links">
@@ -50,6 +49,6 @@ export default class Navigation extends Component {
           </div>
         </div>
       </nav>
-    )
+    );
   }
 }

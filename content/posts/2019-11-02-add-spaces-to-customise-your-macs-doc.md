@@ -18,3 +18,7 @@ Changes wont show up untill the dock is restarted.
 ```terminal
 $ killall Dock
 ```
+
+```terminal
+-bash: hello-world: command not found
+```

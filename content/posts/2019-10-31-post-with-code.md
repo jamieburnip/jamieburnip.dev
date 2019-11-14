@@ -55,3 +55,6 @@ Class HomeController extends Controller
   }
 }
 ```
+```terminal
+$ killall Dock
+```

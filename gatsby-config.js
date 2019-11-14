@@ -1,3 +1,4 @@
+const tailwind = require("tailwindcss");
 const urljoin = require("url-join");
 const config = require("./data/SiteConfig");
 
@@ -21,14 +22,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sass",
       options: {
-        postCssPlugins: [require("tailwindcss")("./tailwind.config.js")]
+        postCssPlugins: [tailwind]
       }
     },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true,
-        develop: true,
+        // develop: true,
         tailwind: true
       }
     },

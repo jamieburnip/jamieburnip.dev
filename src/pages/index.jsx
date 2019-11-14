@@ -1,24 +1,29 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import Layout from '../layout';
-import PostListing from '../components/PostListing';
-import ProjectListing from '../components/ProjectListing';
-import Quotation from '../components/Quotation';
-import SEO from '../components/SEO/SEO';
-import config from '../../data/SiteConfig';
-import projects from '../../data/projects'
-import quotes from '../../data/quotes';
+import React from "react";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import Layout from "../layout";
+import PostListing from "../components/PostListing";
+import ProjectListing from "../components/ProjectListing";
+import Quotation from "../components/Quotation";
+import SEO from "../components/SEO/SEO";
+import config from "../../data/SiteConfig";
+import projects from "../../data/projects";
+import quotes from "../../data/quotes";
 
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
+
     return (
       <Layout>
         <div className="index-container">
           <Helmet title={config.siteTitle} />
           <SEO />
-          <PostListing postEdges={postEdges} />
+
+          <section className="section">
+            <h2>Open Source Projects</h2>
+            <PostListing postEdges={postEdges} />
+          </section>
 
           <section className="section">
             <h2>Open Source Projects</h2>

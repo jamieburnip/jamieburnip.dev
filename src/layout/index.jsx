@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import "./index.scss";
+import "../styles/main.scss";
 
 export default class MainLayout extends React.Component {
   render() {
@@ -21,11 +21,11 @@ export default class MainLayout extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
         </Helmet>
-        <Navigation menuLinks={config.menuLinks} />
+        {/* <Navigation menuLinks={config.menuLinks} /> */}
         <main id="main-content">
-          <div class="container mx-auto">{children}</div>
+          <div className="container mx-auto bg-red">{children}</div>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
