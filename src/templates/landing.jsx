@@ -3,34 +3,41 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
+import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
-export default class CategoryTemplate extends React.Component {
+class Landing extends React.Component {
   render() {
-    const { category } = this.props.pageContext;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
-        <div className="category-container">
-          <Helmet
-            title={`Posts in category "${category}" | ${config.siteTitle}`}
-          />
-          <PostListing postEdges={postEdges} />
+        <div className="landing-container">
+          <div className="posts-container">
+            <Helmet title={config.siteTitle} />
+            <SEO />
+
+            <div className="container">
+              <div className="row">
+                <div className="one-half column" style={{ marginTop: `25%` }}>
+                  <h4>Basic Page</h4>
+
+                  <PostListing postEdges={postEdges} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </Layout>
     );
   }
 }
 
+export default Landing;
+
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query CategoryPage($category: String) {
-    allMarkdownRemark(
-      limit: 1000
-      sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { category: { eq: $category } } }
-    ) {
-      totalCount
+  query LandingQuery {
+    allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
       edges {
         node {
           fields {

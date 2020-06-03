@@ -1,5 +1,5 @@
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
@@ -8,7 +8,7 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
+import "./highlight-syntax.css";
 import "./post.css";
 
 export default class PostTemplate extends React.Component {
@@ -17,28 +17,33 @@ export default class PostTemplate extends React.Component {
     const { slug } = pageContext;
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter;
+
     if (!post.id) {
       post.id = slug;
     }
-    if (!post.category_id) {
-      post.category_id = config.postDefaultCategoryID;
-    }
+
     return (
       <Layout>
-        <div>
-          <Helmet>
-            <title>{`${post.title} | ${config.siteTitle}`}</title>
-          </Helmet>
-          <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+        </Helmet>
+        <SEO postPath={slug} postNode={postNode} postSEO />
+
+        <div className="container">
+          <div className="row">
+            <div className="twelve column">
+              <h1>{post.title}</h1>
+
+              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              
+              <div className="post-meta">
+                <PostTags tags={post.tags} />
+                <SocialLinks postPath={slug} postNode={postNode} />
+              </div>
+              
+              <UserInfo config={config} />
+              <Footer config={config} />
             </div>
-            <UserInfo config={config} />
-            <Footer config={config} />
           </div>
         </div>
       </Layout>

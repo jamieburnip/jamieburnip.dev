@@ -32,13 +32,16 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/posts/`
+        path: `${__dirname}/content/`
       }
     },
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`
+          },
           {
             resolve: "gatsby-remark-images",
             options: {
@@ -69,6 +72,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-catch-links",
+    "gatsby-plugin-use-dark-mode",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
     {
@@ -165,7 +169,8 @@ module.exports = {
               }
             }
           `,
-            output: config.siteRss
+            output: config.siteRss,
+            title: config.siteRssTitle
           }
         ]
       }

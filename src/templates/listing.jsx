@@ -1,5 +1,5 @@
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
@@ -39,13 +39,19 @@ class Listing extends React.Component {
 
     return (
       <Layout>
-        <div className="listing-container">
-          <div className="posts-container">
-            <Helmet title={config.siteTitle} />
-            <SEO />
-            <PostListing postEdges={postEdges} />
+        <div className="container">
+          <div className="row">
+            <div className="twelve column">
+              <h4>Basic Page</h4>
+
+              <Helmet title={config.siteTitle} />
+              <SEO />
+              <PostListing postEdges={postEdges} />
+
+
+              {this.renderPaging()}
+            </div>
           </div>
-          {this.renderPaging()}
         </div>
       </Layout>
     );

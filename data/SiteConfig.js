@@ -1,15 +1,15 @@
 const config = {
-  siteTitle: "MadeByJamie.dev", // Site title.
-  siteTitleShort: "MBJ.DEV", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "Made by Jamie", // Alternative site title for SEO.
+  siteTitle: "Jamie Burnip's Digital Garden | Software Developer", // Site title.
+  siteTitleShort: "It's Jamie", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleAlt: "Software Development Blog for Jamie Burnip", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://madebyjamie.dev", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Web development articles and tutorials made by me, Jamie.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteFBAppID: "", // FB Application ID for using app insights
-  googleAnalyticsID: "UA-48020081-5", // GA tracking ID.
-  postDefaultCategoryID: "Developement", // Default category for posts.
+  siteRssTitle: "Gatsby Advanced Starter RSS feed", // Title of the RSS feed
+  siteFBAppID: "1825356251115265", // FB Application ID for using app insights
+  googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 4, // Amount of posts displayed per listing page.
