@@ -1,9 +1,9 @@
 {
-  "name": "madebyjamie.dev",
+  "name": "jamieburnip.dev",
   "description": "Personal website running on Gatsby, React, and Node.js.",
   "version": "0.1.0",
-  "author": "Jamie Burnip <jamieburnip@gmail.com>",
-  "repository": "git@github.com:jamieburnip/madebyjamie.dev",
+  "author": "Jamie Burnip <me@jamieburnip.dev>",
+  "repository": "git@github.com:jamieburnip/jamieburnip.dev",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",

@@ -58,7 +58,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: "github",
       node,
-      value: `https://github.com/jamieburnip/madebyjamie.dev/tree/master/${rootFilePath}`,
+      value: `https://github.com/jamieburnip/jamieburnip.dev/tree/master/${rootFilePath}`,
     });
   }
 };

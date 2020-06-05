@@ -3,13 +3,12 @@ export default [
     icon: '🤖',
     title: 'Jambot (Discord Bot)',
     source: 'https://github.com/jamieburnip/discord-jambot',
-    description:
-      'A sensible Webpack 4 boilerplate with with Babel, Sass, ESLint, HMR, and prod/dev optimization.',
+    description: 'A discord bot created with Typescript + Nodejs.',
   },
   {
     icon: '💾',
-    title: 'madebyjamie.dev',
-    source: 'https://github.com/jamieburnip/madebyjamie.dev/',
+    title: 'jamieburnip.dev',
+    source: 'https://github.com/jamieburnip/jamieburnip.dev/',
     description: 'Personal theme for Gatsby (the source of this website).',
   },
 ];

@@ -3,7 +3,7 @@ const config = {
   siteTitleShort: "It's Jamie", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Software Development Blog for Jamie Burnip", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "https://madebyjamie.dev", // Domain of your website without pathPrefix.
+  siteUrl: "https://jamieburnip.dev", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Web development articles and tutorials made by me, Jamie.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
@@ -39,7 +39,7 @@ const config = {
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: `© ${new Date().getFullYear()} madebyjamie.dev`, // Copyright string for the footer of the website and RSS feed.
+  copyright: `Jamie Burnip © ${new Date().getFullYear()}`, // Copyright string for the footer of the website and RSS feed.
   themeColor: "#ff1493", // Used for setting manifest and progress theme colors.
   backgroundColor: "#ffffff" // Used for setting manifest background color.
 };
