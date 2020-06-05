@@ -5,10 +5,17 @@ const _ = require("lodash");
 const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
 
+function extractFirstText(str) {
+  const matches = str.match(/"(.*?)"/);
+  return matches ? matches[1] : str;
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
+  const parent = getNode(node.parent);
   const { createNodeField } = actions;
   let slug;
-  if (node.internal.type === "MarkdownRemark") {
+
+  if (["MarkdownRemark", "Mdx"].includes(node.internal.type)) {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
@@ -32,25 +39,43 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         if (!date.isValid)
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
 
-        createNodeField({ node, name: "date", value: date.toISOString() });
+        createNodeField({
+          name: "date",
+          node,
+          value: date.toISOString(),
+        });
       }
     }
-    createNodeField({ node, name: "slug", value: slug });
+
+    createNodeField({
+      name: "slug",
+      node,
+      value: slug,
+    });
+
+    const rootFilePath = extractFirstText(parent.internal.description);
+
+    createNodeField({
+      name: "github",
+      node,
+      value: `https://github.com/jamieburnip/madebyjamie.dev/tree/master/${rootFilePath}`,
+    });
   }
 };
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postPage = path.resolve("src/templates/post.jsx");
-  const tagPage = path.resolve("src/templates/tag.jsx");
-  const categoryPage = path.resolve("src/templates/category.jsx");
+  // const tagPage = path.resolve("src/templates/tag.jsx");
+  // const categoryPage = path.resolve("src/templates/category.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
     {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
+            id
             fields {
               slug
             }
@@ -74,7 +99,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const tagSet = new Set();
   const categorySet = new Set();
 
-  const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+  const postsEdges = markdownQueryResult.data.allMdx.edges;
 
   // Sort posts
   postsEdges.sort((postA, postB) => {
@@ -98,7 +123,7 @@ exports.createPages = async ({ graphql, actions }) => {
   postsEdges.forEach((edge, index) => {
     // Generate a list of tags
     if (edge.node.frontmatter.tags) {
-      edge.node.frontmatter.tags.forEach(tag => {
+      edge.node.frontmatter.tags.forEach((tag) => {
         tagSet.add(tag);
       });
     }
@@ -122,26 +147,26 @@ exports.createPages = async ({ graphql, actions }) => {
         nexttitle: nextEdge.node.frontmatter.title,
         nextslug: nextEdge.node.fields.slug,
         prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug
-      }
+        prevslug: prevEdge.node.fields.slug,
+      },
     });
   });
 
   //  Create tag pages
-  tagSet.forEach(tag => {
-    createPage({
-      path: `/tags/${_.kebabCase(tag)}/`,
-      component: tagPage,
-      context: { tag }
-    });
-  });
+  // tagSet.forEach((tag) => {
+  //   createPage({
+  //     path: `/tags/${_.kebabCase(tag)}/`,
+  //     component: tagPage,
+  //     context: { tag },
+  //   });
+  // });
 
   // Create category pages
-  categorySet.forEach(category => {
-    createPage({
-      path: `/categories/${_.kebabCase(category)}/`,
-      component: categoryPage,
-      context: { category }
-    });
-  });
+  // categorySet.forEach((category) => {
+  //   createPage({
+  //     path: `/categories/${_.kebabCase(category)}/`,
+  //     component: categoryPage,
+  //     context: { category },
+  //   });
+  // });
 };

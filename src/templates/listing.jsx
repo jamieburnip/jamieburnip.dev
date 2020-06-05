@@ -63,7 +63,7 @@ export default Listing;
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
   query ListingQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
+    allMarkdownRemark: allMdx(
       sort: { fields: [fields___date], order: DESC }
       limit: $limit
       skip: $skip
