@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  --brand-color: #e7408e;
   --font-color: rgb(19, 20, 21);
   --bg-color: rgb(255, 255, 255);
 
@@ -45,4 +46,8 @@ body.dark-mode {
   /* min-width: 100vw; */
   /* display: flex; */
   /* padding: 20px; */
+}
+
+a { 
+  color: var(--brand-color);
 }

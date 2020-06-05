@@ -1,5 +1,5 @@
 const config = {
-  siteTitle: "Jamie Burnip's Digital Garden | Software Developer", // Site title.
+  siteTitle: "Jamie Burnip", // Site title.
   siteTitleShort: "It's Jamie", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Software Development Blog for Jamie Burnip", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
@@ -39,7 +39,7 @@ const config = {
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: `Copyright © ${new Date().getFullYear()}. Jamie`, // Copyright string for the footer of the website and RSS feed.
+  copyright: `© ${new Date().getFullYear()} madebyjamie.dev`, // Copyright string for the footer of the website and RSS feed.
   themeColor: "#ff1493", // Used for setting manifest and progress theme colors.
   backgroundColor: "#ffffff" // Used for setting manifest background color.
 };
