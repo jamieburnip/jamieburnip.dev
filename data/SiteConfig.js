@@ -14,7 +14,7 @@ const config = {
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 4, // Amount of posts displayed per listing page.
   userName: "Jamie", // Username to display in the author segment.
-  userEmail: "jamieburnip@gmail.com", // Email used for RSS feed's author segment
+  userEmail: "me@jamieburnip.dev", // Email used for RSS feed's author segment
   userGithub: "jamieburnip",
   userTwitter: "jamieburnip", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Newcastle-upon-Tyne, UK", // User location to display in the author segment.
