@@ -1,0 +1,48 @@
+---
+date: 2020-06-05
+title: "WIP - laravel create pagination from array"
+cover: "https://unsplash.it/1152/300/?random?BirchintheRoses"
+slug: "laravel-create-pagination-from-array"
+category: Code
+tags:
+    - php
+    - laravel
+    - rest api
+---
+
+```php
+class PostController
+{
+    public function index(Request $request, PostApi $api)
+    {
+      $data = $api->allPosts();
+      
+      $posts = new LengthAwarePaginator(
+          $items['data'],
+          $items['total'] ?? count($items['data']),
+          $items['per page'] ?? 10,
+          $items['page'] ?? 1,
+          ['path' => Paginator::resolveCurrentPath()]
+      );
+    }
+```
+```terminal
+$ killall Dock
+```
+
+```terminal
+class PostController
+{
+    public function index(Request $request, PostApi $api)
+    {
+      $data = $api->allPosts();
+      
+      $posts = new LengthAwarePaginator(
+          $items['data'],
+          $items['total'] ?? count($items['data']),
+          $items['per page'] ?? 10,
+          $items['page'] ?? 1,
+          ['path' => Paginator::resolveCurrentPath()]
+      );
+    }
+```
