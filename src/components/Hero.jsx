@@ -75,7 +75,7 @@ const Hero = () => {
   return (
     <HeroSection>
       <HeroContainer>
-        <NameTitle style={{ transform: `translate3d(${window.scrollY}px, 0px, 0px)` }}>
+        <NameTitle>
           Hello I’m <NameSpan>Jamie Burnip</NameSpan>
         </NameTitle>
       </HeroContainer>
