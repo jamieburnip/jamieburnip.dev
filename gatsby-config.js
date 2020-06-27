@@ -5,8 +5,8 @@ module.exports = {
     title: config.siteTitle,
     description: config.siteDescription,
     author: `@jamieburnip`,
-    url: config.siteUrl,
     email: config.siteEmail,
+    siteUrl: config.siteUrl,
   },
   plugins: [
     `gatsby-plugin-eslint`,

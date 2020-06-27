@@ -20,7 +20,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
-            url
+            siteUrl
           }
         }
       }
@@ -33,14 +33,14 @@ function SEO({ description, lang, meta, title }) {
     {
       '@context': 'http://schema.org',
       '@type': 'WebSite',
-      url: site.siteMetadata.url,
+      url: site.siteMetadata.siteUrl,
       name: site.siteMetadata.title,
     },
     {
       '@context': 'https://schema.org/',
       '@type': 'Person',
       name: 'Jamie Burnip',
-      url: site.siteMetadata.url,
+      url: site.siteMetadata.siteUrl,
       // image: 'me',
       sameAs: config.socialLinks.map(({ url }) => url),
     },
