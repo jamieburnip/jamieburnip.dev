@@ -5,10 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
+import config from '../../data/SiteConfig';
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -19,13 +20,31 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            url
           }
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
+
+  const schemaOrgJSONLD = [
+    {
+      '@context': 'http://schema.org',
+      '@type': 'WebSite',
+      url: site.siteMetadata.url,
+      name: site.siteMetadata.title,
+    },
+    {
+      '@context': 'https://schema.org/',
+      '@type': 'Person',
+      name: 'Jamie Burnip',
+      url: site.siteMetadata.url,
+      // image: 'me',
+      sameAs: config.socialLinks.map(({ url }) => url),
+    },
+  ];
 
   return (
     <Helmet
@@ -68,21 +87,25 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
-  )
+    >
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrgJSONLD)}
+      </script>
+    </Helmet>
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
-}
+  description: config.siteDescription,
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;

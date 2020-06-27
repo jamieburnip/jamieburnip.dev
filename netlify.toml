@@ -1,0 +1,12 @@
+[build]
+  publish = "public"
+  command = "yarn run build"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
+  
