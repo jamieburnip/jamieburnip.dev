@@ -4,7 +4,7 @@ import mq from './../style/mq';
 
 const HeroSection = styled.section`
   height: 100vh;
-  padding: 85px 0;
+  padding: 95px 0;
   margin: 0;
 
   ${mq.desktop`
