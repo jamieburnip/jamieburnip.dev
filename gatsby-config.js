@@ -1,4 +1,14 @@
+const urljoin = require('url-join');
 const config = require('./data/SiteConfig');
+
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = config.siteUrl,
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
   siteMetadata: {
@@ -6,7 +16,7 @@ module.exports = {
     description: config.siteDescription,
     author: `@jamieburnip`,
     email: config.siteEmail,
-    siteUrl: config.siteUrl,
+    siteUrl: siteUrl,
   },
   plugins: [
     `gatsby-plugin-eslint`,
@@ -65,8 +75,25 @@ module.exports = {
         ],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: siteUrl,
+        sitemap: urljoin(siteUrl, `/sitemap.xml`),
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+        },
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 };
