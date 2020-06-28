@@ -22,14 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  
-}
-
 footer {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1.5rem 2rem;
     background-color: rgb(243, 243, 243);
 }
 

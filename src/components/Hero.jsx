@@ -1,82 +1,82 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import mq from './../style/mq';
+import { wrapper, colors } from './../consts/style';
 
 const HeroSection = styled.section`
-  height: 100vh;
-  padding: 85px 0;
-  margin: 0;
-
-  ${mq.desktop`
-    padding: 60px 0;
-  `}
+  ${wrapper}
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 `;
 
 const HeroContainer = styled.div`
   display: flex;
   align-items: center;
-  ${'' /* justify-content: flex-end; */}
-  position: relative;
-  height: 100%;
+  justify-content: center;
+  height: 50vh;
+
+  ${mq.lg`
+    height: 60vh;
+  `}
+
+  ${mq.xl`
+    height: 70vh;
+  `}
 `;
 
 const NameTitle = styled.h1`
-  position: absolute;
-  color: #f44647;
-  font-weight: 800;
-  font-size: 140px;
-  line-height: 143px;
-  letter-spacing: -4px;
-  z-index: 1;
-  left: 0;
+  text-align: center;
+  color: ${colors.primary};
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 1.6em;
 
-  ${mq.desktop`
-    font-size: 120px;
-    line-height: 123px;
+  ${mq.sm`
+    font-size: 3rem;
   `}
 
-  ${mq.tabletSmall`
-    font-size: 110px;
-    line-height: 113px;
+  ${mq.md`
+    font-size: 3.5rem;
   `}
 
-  ${mq.tabletSmall`
-    font-size: 70px;
-    line-height: 73px;
-    max-width: 340px;
-    letter-spacing: -2px;
+  ${mq.lg`
+    font-size: 4rem;
   `}
 
-  ${mq.mobile`
-    font-size: 56px;
-    line-height: 62px;
-    padding: 50px 0;
+  ${mq.xl`
+    font-size: 4.5rem;
   `}
 `;
 
 const NameSpan = styled.span`
   text-decoration: underline;
+  font-style: normal;
+  font-size: 1.3em;
+
+  ${mq.sm`
+    font-size: 1.4em;
+  `}
+
+  ${mq.md`
+    font-size: 1.5em;
+  `}
+
+  ${mq.lg`
+    font-size: 1.6em;
+  `}
+
+  ${mq.xl`
+    font-size: 1.8em;
+  `}
 `;
 
 const Hero = () => {
-  // const [navIsOpen, setNavIsOpen] = useState(false);
-  // const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    console.log(window.scrollY);
-
-    window.addEventListener('scroll', () => {
-      console.log(window.scrollY);
-    });
-
-    return window.removeEventListener('scroll', null);
-  });
-
   return (
     <HeroSection>
       <HeroContainer>
         <NameTitle>
-          Hello I’m <NameSpan>Jamie Burnip</NameSpan>
+          Hello I’m
+          <br /> <NameSpan>Jamie Burnip</NameSpan>
         </NameTitle>
       </HeroContainer>
     </HeroSection>

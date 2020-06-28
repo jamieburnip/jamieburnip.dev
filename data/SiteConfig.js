@@ -29,7 +29,7 @@ const config = {
   ],
 
   copyright: `© ${new Date().getFullYear()}, jamieburnip.dev`,
-  themeColor: '#ff1493', // Used for setting manifest and progress theme colors.
+  themeColor: '#FB3A94', // Used for setting manifest and progress theme colors.
   backgroundColor: '#ffffff', // Used for setting manifest background color.
 };
 

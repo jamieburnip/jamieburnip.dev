@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import Navigation from './Navigation';
+
+import EmailLink from './../components/EmailLink';
+import { wrapper, colors } from './../consts/style';
 
 const HeaderWrapper = styled.div`
-  width: 100%;
-  padding: 2.5rem 2rem;
-  background-color: #fff0f0;
+  ${wrapper}
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   display: flex;
   justify-content: space-between;
-
-  &.is-scrolled {
-    padding: 1.5rem 2rem;
-  }
 `;
 
 const SiteTitle = styled(Link)`
@@ -26,7 +24,7 @@ const SiteTitle = styled(Link)`
   display: inline-block;
 
   &:hover {
-    color: #f44647;
+    color: ${colors.primary};
     text-decoration: none;
   }
 
@@ -43,30 +41,18 @@ const SiteTitle = styled(Link)`
 
   &:hover:before {
     width: 0;
-    background-color: #f44647;
+    background-color: ${colors.primary};
   }
 `;
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    });
-
-    return window.removeEventListener('scroll', null);
-  });
-
   return (
-    <HeaderWrapper className={`${scrolled ? 'is-scrolled' : ''}`}>
-      <SiteTitle to="/">Jamie Burnip</SiteTitle>
-      {/* <Navigation /> */}
-    </HeaderWrapper>
+    <header>
+      <HeaderWrapper>
+        <SiteTitle to="/">Jamie Burnip</SiteTitle>
+        <EmailLink />
+      </HeaderWrapper>
+    </header>
   );
 };
 

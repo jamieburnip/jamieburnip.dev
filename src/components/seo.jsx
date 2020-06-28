@@ -9,8 +9,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import config from '../../data/SiteConfig';
+import urljoin from 'url-join';
 
+import config from '../../data/SiteConfig';
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -41,7 +42,7 @@ function SEO({ description, lang, meta, title }) {
       '@type': 'Person',
       name: 'Jamie Burnip',
       url: site.siteMetadata.siteUrl,
-      // image: 'me',
+      image: urljoin(site.siteMetadata.siteUrl, `/images/me.jpg`),
       sameAs: config.socialLinks.map(({ url }) => url),
     },
   ];
