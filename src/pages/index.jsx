@@ -6,7 +6,7 @@ import SocialLinks from '../components/SocialLinks';
 
 const IndexPage = () => (
   <Fragment>
-    <SEO title="Home" />
+    <SEO />
 
     <Hero />
 
