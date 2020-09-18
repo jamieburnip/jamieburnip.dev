@@ -13798,10 +13798,10 @@ typeface-cabin@^0.0.72:
   resolved "https://registry.yarnpkg.com/typeface-cabin/-/typeface-cabin-0.0.72.tgz#33667852f30d574b5136f6cd08d162384b19a0d2"
   integrity sha512-YN3MG1CaqyGygSekamQ8HnuZEv6hvn4XHITPf1N/v9sp0sCQ3VHM+e9xDjiIVPjsTyScC8s/TZ79xZvcOZYJ+g==
 
-typeface-inter@^3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/typeface-inter/-/typeface-inter-3.12.0.tgz#3cd7cdae730daa73cc01e88fdbe27601dc7c4fd7"
-  integrity sha512-3vKBTKCl6S0OJhMKwmyAOodsfTD3Gxsrj5ReavpQmdZ385ecUr3swfNxiBZ4u594mNfojlqL/zUebavV3A1yCA==
+typeface-inter@^3.15.0:
+  version "3.15.0"
+  resolved "https://registry.yarnpkg.com/typeface-inter/-/typeface-inter-3.15.0.tgz#7ac09c0bcc5fdd5c5b85727df6478ee287f56deb"
+  integrity sha512-kWLJsvqSJTBKilu1HsBYHwi3usFg8JQ9I9u+bcU2kOkIi48fOZy8sYacbFmlJ9EHRVNqqvM4zeI73WCSKNMOuQ==
 
 typeface-roboto@^0.0.75:
   version "0.0.75"
