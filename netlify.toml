@@ -6,7 +6,27 @@
   command = "GATSBY_ACTIVE_ENV=production yarn run build:producton"
 
 [[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+
+[[headers]]
   for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+
+[[headers]]
+  for = "/svgs/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+
+[[headers]]
+  for = "/static/*"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
 
