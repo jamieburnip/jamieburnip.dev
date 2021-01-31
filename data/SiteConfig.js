@@ -8,8 +8,6 @@ const config = {
   siteEmail: 'me@jamieburnip.dev',
   siteDescription: `Hi, Hello! I'm Jamie Burnip. I’m a software developer from Newcastle-upon-tyne.`,
 
-  googleAnalyticsID: 'UA-48020081-6',
-
   socialLinks: [
     {
       name: 'twitter',
