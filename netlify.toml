@@ -11,22 +11,12 @@
     Cache-Control = "no-cache"
 
 [[headers]]
-  for = "/icons/*"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-
-[[headers]]
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
 
 [[headers]]
-  for = "/svgs/*"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-
-[[headers]]
-  for = "/static/*"
+  for = "/logos/*"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
 
