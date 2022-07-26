@@ -1,0 +1,71 @@
+.section {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  
+  @media screen and (min-width: 992px) {
+    height: 60vh;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 70vh;
+  }
+}
+
+.title {
+  text-align: center;
+  color: var(--color-primary);
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 1.6em;   
+
+  @media screen and (min-width: 576px) {
+    font-size: 3rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    font-size: 3.5rem;
+  }
+  
+  @media screen and (min-width: 992px) {
+    font-size: 4rem;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    font-size: 4.5rem;
+  }
+}
+
+.name {
+  text-decoration: underline;
+  font-style: normal;
+  font-size: 1.3em;
+
+  @media screen and (min-width: 576px) {
+    font-size: 1.4em;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.5em;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 1.6em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.8em;
+  }
+}

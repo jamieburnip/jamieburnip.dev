@@ -1,0 +1,41 @@
+import "typeface-inter";
+import "typeface-roboto";
+import { createGlobalStyle } from "styled-components";
+
+const Global = createGlobalStyle`
+
+html { 
+  font-family: 'Inter', sans-serif; 
+  font-feature-settings: 'dlig', 'zero', 'ss01', 'cv05', 'cv10';
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: #1c1f26;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+footer {
+    background-color: rgb(243, 243, 243);
+}
+
+`;
+
+export default Global;

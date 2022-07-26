@@ -1,0 +1,43 @@
+.section {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.email {
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.list {
+  margin: 4rem 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.listItem {
+  display: block;
+  list-style: none;
+
+  & a {
+    color: #000;
+    width: 100%;
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 5px;
+    padding: 1.25em 3.5em;
+    margin-right: -10px;
+    display: inline-block;
+
+    &:hover {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+  }
+}
