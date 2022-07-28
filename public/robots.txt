@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.jamieburnip.dev
+
+# Sitemaps
+Sitemap: https://www.jamieburnip.dev/sitemap.xml
