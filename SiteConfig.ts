@@ -8,6 +8,10 @@ const config = {
   siteEmail: "me@jamieburnip.dev",
   siteDescription: `Hi, Hello! I'm Jamie Burnip. I’m a software developer from Newcastle-upon-tyne.`,
 
+  social: {
+    twitter: "@jamieburnip",
+  },
+
   socialLinks: [
     {
       name: "twitter",

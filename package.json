@@ -13,7 +13,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typeface-inter": "^3.18.1",
-    "typeface-roboto": "^1.1.13"
+    "typeface-roboto": "^1.1.13",
+    "url-join": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "18.6.1",
