@@ -20,6 +20,7 @@ jobs:
       - run: yarn lint
 
   build:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
