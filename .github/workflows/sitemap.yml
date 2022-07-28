@@ -3,14 +3,20 @@ name: Submit Sitemap
 on: deployment
 
 jobs:
-  lint:
+  google:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v3
+      - name: Deployment hook
+        uses: fjogeleit/http-request-action@master
         with:
-          node-version: 16.x
-          cache: "yarn"
-      - run: yarn install
-      - run: yarn lint
+          url: "https://www.google.com/ping?sitemap=https://www.jamieburnip.dev/sitemap.xml"
+          method: "GET"
+
+  yandex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment hook
+        uses: fjogeleit/http-request-action@master
+        with:
+          url: "https://webmaster.yandex.ru/ping?sitemap=https://www.jamieburnip.dev/sitemap.xml"
+          method: "GET"
