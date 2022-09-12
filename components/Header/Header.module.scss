@@ -34,7 +34,8 @@
     height: 2px;
     width: calc(100% - 5px);
     transition: 0.35s ease-out;
-    background-color: #000000;
+    background-color: var(--color-primary);
+    pointer-events: none;
   }
 
   &:hover:before {
