@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // export default {
 //   desktop: 1200,
 //   xl: 1200,
@@ -9,47 +13,47 @@
 //   sm: 576,
 // };
 
-:root {
-  --color-primary: #FB3A94;
-  --text-primary: #000000;
+// :root {
+//   --color-primary: #FB3A94;
+//   --text-primary: #000000;
 
-  --body-bg: #FFFFFF;
-}
+//   --body-bg: #FFFFFF;
+// }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body-bg: #1c1f26;
-    --text-primary: #FFFFFF;
-  }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --body-bg: #1c1f26;
+//     --text-primary: #FFFFFF;
+//   }
 
-  html {
-    color-scheme: dark;
-  }
-}
+//   html {
+//     color-scheme: dark;
+//   }
+// }
 
-html { 
-  font-family: 'Inter', sans-serif; 
-  font-feature-settings: 'dlig', 'zero', 'ss01', 'cv05', 'cv10';
-}
+// html { 
+//   font-family: 'Inter', sans-serif; 
+//   font-feature-settings: 'dlig', 'zero', 'ss01', 'cv05', 'cv10';
+// }
 
-body {
-//   color: white;
-  background: var(--body-bg);
-}
+// body {
+// //   color: white;
+//   background: var(--body-bg);
+// }
 
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
+// @supports (font-variation-settings: normal) {
+//   html { font-family: 'Inter var', sans-serif; }
+// }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
-}
+// h1, h2, h3, h4, h5, h6 {
+//   font-family: 'Roboto', sans-serif;
+// }
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// * {
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
 
-footer {
-    background-color: rgb(243, 243, 243);
-}
+// footer {
+//     background-color: rgb(243, 243, 243);
+// }

@@ -1,16 +1,21 @@
 import type { NextPage } from "next";
-import Hero from "../components/Hero";
 import SEO from "../components/Seo";
-import SocialLinks from "../components/SocialLinks";
+import Intro from "../components/Intro";
+import Portfolio from "../components/Portfolio";
+import Timeline from "../components/Timeline";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
     <main>
       <SEO title="Hi" />
 
-      <Hero />
-
-      <SocialLinks />
+      <Intro />
+      <Portfolio />
+      <Timeline />
+      <Contact />
+      <Footer />
     </main>
   );
 };
